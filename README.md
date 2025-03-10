@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI-Powered Medical Documentation System
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is an AI-powered medical documentation system designed to streamline the process of recording and managing patient interactions. The goal is to reduce the time doctors spend on documentation, allowing them to focus more on patient care. The system integrates voice-to-text transcription, text-based notes, document uploads, and intelligent search capabilities.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **User Authentication**: Secure login system for doctors and medical staff.
+- **Session Management**: Each patient interaction is stored in a session.
+- **Voice-to-Text Transcription**: Converts recorded audio into text using AI-powered speech recognition.
+- **Rich Documentation Support**: Doctors can add text notes, voice recordings, and uploaded documents.
+- **Search & Retrieval**: Full-text search and vector search to find relevant patient records.
+- **Real-Time Data Sync**: Optimized for fast and seamless updates.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend**: Next.js (React) with Tailwind CSS
+- **Backend**: Next.js API Routes
+- **Database**: PostgreSQL (Supabase)
+- **Authentication**: Supabase Auth
+- **AI Services**: OpenAI / Vercel AI SDK
+- **Storage**: Supabase Storage for voice recordings & documents
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js (Latest LTS)
+- PostgreSQL database (Supabase recommended)
+- API keys for OpenAI and/or Vercel AI SDK
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Setup
 
-## Deploy on Vercel
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/zigavidmar/healthcare-assistant.git
+   cd your-repo
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up environment variables:
+   Create a `.env.local` file and add:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-key
+   OPENAI_API_KEY=your-openai-key
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Login/Register**: Doctors can sign in securely.
+- **Start a Session**: Each patient interaction starts a new session.
+- **Add Documentation**:
+  - Type text notes.
+  - Record voice and transcribe it.
+  - Upload files (e.g., PDFs, medical images).
+- **Search & Retrieve**: Find past patient sessions quickly using full-text and vector search.
+
+## API Endpoints
+
+- `POST /api/voice-to-text` → Transcribes recorded audio.
+
+## Roadmap
+
+- [ ] Implement real-time collaboration between doctors.
+- [ ] Improve AI-based recommendations.
+- [ ] Add analytics and reporting features.
+
+## Contributing
+
+Contributions are welcome! Fork the repo, create a feature branch, and submit a PR.
+
+## License
+
+MIT License
