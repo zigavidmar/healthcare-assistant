@@ -66,17 +66,3 @@ This project is an AI-powered medical documentation system designed to streamlin
 ## API Endpoints
 
 - `POST /api/voice-to-text` → Transcribes recorded audio.
-
-## Roadmap
-
-- [ ] Implement real-time collaboration between doctors.
-- [ ] Improve AI-based recommendations.
-- [ ] Add analytics and reporting features.
-
-## Contributing
-
-Contributions are welcome! Fork the repo, create a feature branch, and submit a PR.
-
-## License
-
-MIT License
