@@ -1,6 +1,4 @@
-import { deletePatientSessionFile } from "@/queries/delete-patient-session-file";
 import useSessionEditor from "@/store/use-session-editor";
-import { createClient } from "@/utils/supabase/client";
 import { AudioLines, Paperclip, X } from "lucide-react";
 import React from "react";
 
